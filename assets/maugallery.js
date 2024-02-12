@@ -48,23 +48,59 @@
     tagsPosition: "bottom",
     navigation: true
   };
+
+  
   $.fn.mauGallery.listeners = function(options) {
-    $(".gallery-item").on("click", function() {
-      if (options.lightBox && $(this).prop("tagName") === "IMG") {
-        $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+
+    //ajout couleur 
+    function filterByTag() {
+      $(".nav-link").removeClass("active");
+
+      $(this).addClass("active");
+
+      var tag = $(this).data("images-toggle");
+      if (tag === "mariage" || tag === "all") {
+        
       } else {
-        return;
+    
+          $("body").css("background-color", "");
       }
+
+      // Filtrer element 
+      $(".gallery-item").each(function() {
+          $(this)
+              .parents(".item-column")
+              .hide();
+          if (tag === "all") {
+              $(this)
+                  .parents(".item-column")
+                  .show(300);
+          } else if ($(this).data("gallery-tag") === tag) {
+              $(this)
+                  .parents(".item-column")
+                  .show(300);
+          }
+      });
+  }
+    // Associer la méthode filterByTag aux événements
+    $(".gallery").on("click", ".nav-link", filterByTag);
+
+    $(".gallery-item").on("click", function() {
+        if (options.lightBox && $(this).prop("tagName") === "IMG") {
+            $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+        } else {
+            return;
+        }
     });
 
-    $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
-      $.fn.mauGallery.methods.prevImage(options.lightboxId)
+        $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
     $(".gallery").on("click", ".mg-next", () =>
-      $.fn.mauGallery.methods.nextImage(options.lightboxId)
+        $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
-  };
+};
+
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
       if (
@@ -261,3 +297,5 @@
     }
   };
 })(jQuery);
+
+
