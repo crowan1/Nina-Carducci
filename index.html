@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="fr" itemscope itemtype="http://schema.org/Article">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
@@ -12,11 +12,49 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
-	<title>Nina Carducci, photographe</title>
-	<meta name="description" content="Découvrez l'univers visuel captivant de
-	 Nina Carducci Photography. Parcourez une galerie d'images saisissantes 
-	 capturant des moments uniques. Explorez nos services de photographie sur 
-	 mesure et nos tarifs abordables pour immortaliser vos souvenirs avec style."> 
+	<title>Photographe, Nina Carducci</title>
+
+	
+	<meta name="description" content="Explorez l'univers visuel envoûtant de Nina Carducci Photography, où une galerie d'images saisissantes vous attend, immortalisant des moments uniques. Découvrez nos services personnalisés de photographie et nos tarifs abordables pour capturer vos souvenirs"> 
+
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "PhotographieService",
+			"name": "Photographe, Nina Carducci",
+			"description": "Explorez l'univers visuel envoûtant de Nina Carducci Photography, où une galerie d'images saisissantes vous attend, immortalisant des moments uniques. Découvrez nos services personnalisés de photographie et nos tarifs abordables pour capturer vos souvenirs",
+			"url": "https://crowan1.github.io/Nina-Carducci/",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "68 avenue Alsace-Lorraine",
+				"addressLocality": "Bordeaux",
+				"postalCode": "33200",
+				"addressCountry": "France"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "05-56-67-78-89",
+				"contactType": "Service client",
+				"hoursAvailable": [
+					{
+						"@type": "OpeningHoursSpecification",
+						"dayOfWeek": [
+							"Monday",
+							"Tuesday",
+							"Wednesday",
+							"Thursday",
+							"Friday"
+						],
+						"opens": "10:00",
+						"closes": "19:00"
+					}
+				]
+			}
+		}
+	</script>
+	
+
 </head>
 <body>
 	<nav>
@@ -28,7 +66,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt=""></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="logo instagram"></a></li>
 		</ul>
 	</div>
 </div>
@@ -37,7 +75,6 @@
 <main>
 
 <div id="header">
-
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -46,13 +83,28 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img  src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP" class="d-block w-100" alt="Homme avec valise sur la route">
+				<picture>
+					<source media="(min-width: 1051px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP">
+					<source media="(max-width: 1050px)" srcset="./assets/images/slider/ryoji-1050px-iwata-wUZjnOv7t0g-unsplash.WebP">
+					<source media="(max-width: 450px)" srcset="./assets/images/slider/ryoji-450px-iwata-wUZjnOv7t0g-unsplash.WebP">
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP" class="d-block w-100" alt="Homme avec valise sur la route">
+				</picture>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP" class="d-block w-100" alt="Image d'une foule">
+				<picture>
+					<source media="(min-width: 1051px)" srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP">
+					<source media="(max-width: 1050px)" srcset="./assets/images/slider/nicholas-1050px-green-nPz8akkUmDI-unsplash.WebP">
+					<source media="(max-width: 450px)" srcset="./assets/images/slider/nicholas-450px-green-nPz8akkUmDI-unsplash.WebP">
+					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP" class="d-block w-100" alt="Image d'une foule">
+				</picture>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP" class="d-block w-100" alt="Image- Unions de mariage">
+				<picture>
+					<source media="(min-width: 1051px)" srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP">
+					<source media="(max-width: 1050px)" srcset="./assets/images/slider/edward-1050px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP">
+					<source media="(max-width: 450px)" srcset="./assets/images/slider/edward-450px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP">
+					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP" class="d-block w-100" alt="Image- Unions de mariage">
+				</picture>
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -64,7 +116,7 @@
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
-</div>
+	
 <div id="about">
 	<div class="picture left">
 		<img src="./assets/images/nina.WebP" alt="Image-Nina Carducci">
@@ -77,20 +129,21 @@
 	</div>
 </div>
 
-<section>
-	<div id="gallery">
+<article>
+	<section>
+		<div id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1.WebP"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-2.png"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-2 2.WebP"/>
-			<img data-gallery-tag="Mariages"  class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-2.WebP"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1.WebP"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-2 2.WebP"/>
-			<img data-gallery-tag="Portrait"  class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-2.WebP"/>
-			<img data-gallery-tag="Concert"  class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-4.WebP"/>
-			<img data-gallery-tag="Entreprises"  class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-2 2.WebP"/>
+			<img data-gallery-tag="Concert" class="gallery-item" alt="image d'un Concert" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1.WebP"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" alt="Image d'un homme classe" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-2.png"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" alt="image d'une fille lors d'une reunion" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-2 2.WebP"/>
+			<img data-gallery-tag="Mariages"  class="gallery-item" alt="Image des mains lors du l'union de mariage" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-2.WebP"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" alt="image du visage d'un homme" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1.WebP"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" alt="image d'un couple lors du mariage" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-2 2.WebP"/>
+			<img data-gallery-tag="Portrait"  class="gallery-item" alt="image d'une  fille" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-2.WebP"/>
+			<img data-gallery-tag="Concert"  class="gallery-item" alt="image d'un chanteur lors d'un concert" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-4.WebP"/>
+			<img data-gallery-tag="Entreprises"  class="gallery-item" alt="image d'une femme sur un ordinateur" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-2 2.WebP"/>
 		</div>
 	</div>
 	<div class="quote">
@@ -102,7 +155,7 @@
 		</figure>
 	</div>
 </div>
-</section>
+
 
 <div id="services">
 	<h2 class="title">Mes services</h2>
@@ -145,6 +198,9 @@
 	
 	</div>
 </div>
+	</section>
+</article>
+	
 <div class="quote">
 	<figure>
 		<blockquote>
@@ -153,26 +209,33 @@
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
 </div>
+</main>
+
+<footer>
 <div id="contact">
 	<div class="container">
 		<div class="form-container">
 			<h2>Une question ? Une demande de devis ?</h2>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
+				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
-				<label>Email</label>
+				<label for="email">Email</label>
 				<input type="email" name="email" id="email">
-				<label>Message</label>
+				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+
 				<input type="submit" value="Envoyer"/>
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.png">
+			<img alt="immage d'un appareil photo" src="./assets/images/camera.WebP">
 		</div>
 	</div>
 </div>
-</main>
+
+</footer>
+
+
 </body>
 </html>
