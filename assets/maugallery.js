@@ -52,36 +52,25 @@
   
   $.fn.mauGallery.listeners = function(options) {
 
-    //ajout couleur 
+    // Fonction pour filtrer par tag
     function filterByTag() {
-      $(".nav-link").removeClass("active");
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
 
-      $(this).addClass("active");
+        var tag = $(this).data("images-toggle");
+        if (tag !== "mariage" && tag !== "all") {
+            $("body").css("background-color", "");
+        }
 
-      var tag = $(this).data("images-toggle");
-      if (tag === "mariage" || tag === "all") {
-        
-      } else {
-    
-          $("body").css("background-color", "");
-      }
+        // Filtrer les éléments
+        $(".gallery-item").each(function() {
+            $(this).parents(".item-column").hide();
+            if (tag === "all" || $(this).data("gallery-tag") === tag) {
+                $(this).parents(".item-column").show(300);
+            }
+        });
+    }
 
-      // Filtrer element 
-      $(".gallery-item").each(function() {
-          $(this)
-              .parents(".item-column")
-              .hide();
-          if (tag === "all") {
-              $(this)
-                  .parents(".item-column")
-                  .show(300);
-          } else if ($(this).data("gallery-tag") === tag) {
-              $(this)
-                  .parents(".item-column")
-                  .show(300);
-          }
-      });
-  }
     // Associer la méthode filterByTag aux événements
     $(".gallery").on("click", ".nav-link", filterByTag);
 
@@ -93,15 +82,18 @@
         }
     });
 
-    $(".gallery").on("click", ".mg-prev", () =>
-        $.fn.mauGallery.methods.prevImage(options.lightboxId)
-    );
-    $(".gallery").on("click", ".mg-next", () =>
-        $.fn.mauGallery.methods.nextImage(options.lightboxId)
-    );
+    $(".gallery").on("click", ".mg-prev", function() {
+        $.fn.mauGallery.methods.prevImage(options.lightboxId);
+    });
+
+    $(".gallery").on("click", ".mg-next", function() {
+        $.fn.mauGallery.methods.nextImage(options.lightboxId);
+    });
 };
 
+
   $.fn.mauGallery.methods = {
+    
     createRowWrapper(element) {
       if (
         !element
@@ -182,17 +174,15 @@
         });
       }
       let index = 0,
-        next = null;
+        prev = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = i ;
         }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      prev = imagesCollection[index - 1] || imagesCollection[imagesCollection.length - 1];
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -220,16 +210,13 @@
           }
         });
       }
-      let index = 0,
-        next = null;
 
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-        }
-      });
-      next = imagesCollection[index] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      let index = imagesCollection.findIndex(
+        img => img.attr("src") === activeImage.attr("src")
+      );
+
+       let next = imagesCollection[index + 1]  || imagesCollection[0]
+      $(".lightboxImage").attr("src", next.attr("src"))
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
