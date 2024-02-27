@@ -2,20 +2,20 @@
 <html lang="fr" itemscope itemtype="http://schema.org/Article">
 
 <head>
+		<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
-	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/style.css">
+
+
+
+	
 	<title>Photographe, Nina Carducci</title>
 
 	<meta name="description"
@@ -42,7 +42,7 @@
 			"name": "Photographe, Nina Carducci",
 			"description": "Explorez l'univers visuel envoûtant de Nina Carducci Photography, où une galerie d'images saisissantes vous attend, immortalisant des moments uniques. Découvrez nos services personnalisés de photographie et nos tarifs abordables pour capturer vos souvenirs",
 			"url": "https://crowan1.github.io/Nina-Carducci/",
-			"image": "https://crowan1.github.io/Nina-Carducci/assets/images/nina.WebP"
+			"image": "https://crowan1.github.io/Nina-Carducci/assets/images/nina.WebP",
 			"address": {
 				"@type": "PostalAddress",
 				"streetAddress": "68 avenue Alsace-Lorraine",
@@ -70,6 +70,7 @@
 				]
 			}
 		}
+		
 	</script>
 </head>
 
@@ -104,42 +105,31 @@
 				</div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<picture>
-							<source media="(min-width: 1051px)"
-								srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP">
-							<source media="(max-width: 1050px)"
-								srcset="./assets/images/slider/ryoji-1050px-iwata-wUZjnOv7t0g-unsplash.WebP">
-							<source media="(max-width: 450px)"
-								srcset="./assets/images/slider/ryoji-450px-iwata-wUZjnOv7t0g-unsplash.WebP">
-							<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP"
-								class="d-block w-100" alt="Homme avec valise sur la route">
-						</picture>
+						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.WebP"
+							 srcset="./assets/images/slider/ryoji-1050px-iwata-wUZjnOv7t0g-unsplash.WebP 1050w,
+									 ./assets/images/slider/ryoji-450px-iwata-wUZjnOv7t0g-unsplash.WebP 450w,
+									 ./assets/images/slider/ryoji-325px-iwata-wUZjnOv7t0g-unsplash.WebP 325w"
+							 sizes="(min-width: 1051px) 1050px, (max-width: 450px) 450px, (max-width: 325px) 325px"
+							 class="d-block w-100" alt="Homme avec valise sur la route">
 					</div>
 					<div class="carousel-item">
-						<picture>
-							<source media="(min-width: 1051px)"
-								srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP">
-							<source media="(max-width: 1050px)"
-								srcset="./assets/images/slider/nicholas-1050px-green-nPz8akkUmDI-unsplash.WebP">
-							<source media="(max-width: 450px)"
-								srcset="./assets/images/slider/nicholas-450px-green-nPz8akkUmDI-unsplash.WebP">
-							<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP"
-								class="d-block w-100" alt="Image d'une foule">
-						</picture>
+						<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.WebP"
+							 srcset="./assets/images/slider/nicholas-1050px-green-nPz8akkUmDI-unsplash.WebP 1050w,
+									 ./assets/images/slider/nicholas-450px-green-nPz8akkUmDI-unsplash.WebP 450w,
+									 ./assets/images/slider/nicholas-325px-green-nPz8akkUmDI-unsplash.WebP 325w"
+							 sizes="(min-width: 1051px) 1050px, (max-width: 450px) 450px, (max-width: 325px) 325px"
+							 class="d-block w-100" alt="Image d'une foule">
 					</div>
 					<div class="carousel-item">
-						<picture>
-							<source media="(min-width: 1051px)"
-								srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP">
-							<source media="(max-width: 1050px)"
-								srcset="./assets/images/slider/edward-1050px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP">
-							<source media="(max-width: 450px)"
-								srcset="./assets/images/slider/edward-450px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP">
-							<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP"
-								class="d-block w-100" alt="Image- Unions de mariage">
-						</picture>
+						<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.WebP"
+							 srcset="./assets/images/slider/edward-1050px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP 1050w,
+									 ./assets/images/slider/edward-450px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP 450w,
+									 ./assets/images/slider/edward-325px-mobile-cisneros-3_h6-1NPDGw-unsplash.WebP 325w"
+							 sizes="(min-width: 1051px) 1050px, (max-width: 450px) 450px, (max-width: 325px) 325px"
+							 class="d-block w-100" alt="Image- Unions de mariage">
 					</div>
 				</div>
+				
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
 					data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -178,28 +168,37 @@
 					<div class="container py-3">
 						<div class="gallery" style="display: none">
 							<img data-gallery-tag="Concert" class="gallery-item" alt="image d'un Concert"
-								src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1.WebP">
+								src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1.WebP"
+								 loading="lazy">
 							<img data-gallery-tag="Entreprises" class="gallery-item" alt="Image d'un homme classe"
-								src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-2.png">
+								src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-2.png"
+								loading="lazy">
 							<img data-gallery-tag="Entreprises" class="gallery-item"
 								alt="image d'une fille lors d'une reunion"
-								src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-22.WebP">
+								src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-22.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Mariages" class="gallery-item"
 								alt="Image des mains lors du l'union de mariage"
-								src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-2.WebP">
+								src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-2.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Portrait" class="gallery-item" alt="image du visage d'un homme"
-								src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1.WebP">
+								src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Mariages" class="gallery-item"
 								alt="image d'un couple lors du mariage"
-								src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-22.WebP">
+								src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-22.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Portrait" class="gallery-item" alt="image d'une  fille"
-								src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-2.WebP">
+								src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-2.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Concert" class="gallery-item"
 								alt="image d'un chanteur lors d'un concert"
-								src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-4.WebP">
+								src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-4.WebP"
+								loading="lazy">
 							<img data-gallery-tag="Entreprises" class="gallery-item"
 								alt="image d'une femme sur un ordinateur"
-								src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-22.WebP">
+								src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-22.WebP"
+								>
 						</div>
 					</div>
 					<div class="quote">
@@ -299,7 +298,12 @@
 
 	</footer>
 
-
+<script src="./assets/bootstrap/bootstrap.bundle.min.js" ></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"  ></script>
+<script src="./assets/maugallery.js" defer ></script>
+	<script src="./assets/scripts.js" defer></script>
+	
 </body>
 
 </html>
